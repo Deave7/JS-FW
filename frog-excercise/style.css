@@ -30,10 +30,24 @@ main {
 	background-color: var(--cream);
 }
 
-button {
+.button {
 	width: 31rem;
 	height: 2rem;
 	border-radius: 5rem;
 	border: none;
-	background-color: #04724d;
+	margin-bottom: 1rem;
+
+	&.primary {
+		background-color: var(--dark-spring-green);
+		color: white;
+	}
+	&.secondary {
+		background-color: var(--shamrock-green);
+		color: white;
+	}
+	&.tetriary {
+		background-color: var(--persian-orange);
+		color: black;
+	}
 }
+
