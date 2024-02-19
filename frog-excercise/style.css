@@ -1,0 +1,39 @@
+:root {
+	--oxford-blue: #011936;
+	--dark-spring-green: #04724d;
+	--shamrock-green: #32965d;
+	--persian-orange: #f0924f;
+	--cream: #f3f9d2;
+
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.5;
+	background-color: var(--oxford-blue);
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+main {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 2rem;
+	border-radius: 2rem;
+	border: 5px solid var(--dark-spring-green);
+	background-color: var(--cream);
+}
+
+button {
+	width: 31rem;
+	height: 2rem;
+	border-radius: 5rem;
+	border: none;
+	background-color: #04724d;
+}
