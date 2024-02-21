@@ -1,0 +1,12 @@
+:root {
+    background-color: rgb(17, 54, 17);
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+   
+}
