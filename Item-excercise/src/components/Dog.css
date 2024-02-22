@@ -1,0 +1,12 @@
+.dog-container {
+    background-color: rgb(32, 32, 32);
+    border: solid rgb(211, 211, 211) 2px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+p {
+    color: white;
+    margin-bottom: 0.5rem;
+    min-width: 10rem;
+}
