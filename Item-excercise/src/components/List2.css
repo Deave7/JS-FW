@@ -1,0 +1,14 @@
+.animal-container {
+    margin-top: 1rem;
+    background-color: rgb(32, 32, 32);
+    border: solid rgb(211, 211, 211) 2px;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 15rem;
+    gap: 1rem;
+    
+    li {
+        margin-left: 1rem;
+    }
+    
+}

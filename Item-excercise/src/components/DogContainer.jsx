@@ -11,7 +11,7 @@ function DogContainer() {
         <h2>Dog Yard</h2>
         <div className='dogs-container'>
         {data.map((dog) => {
-            return <Dog name= {dog.name} size={dog.size} color={dog.color} age={dog.age} />
+            return <Dog name= {dog.name} size={dog.size} color={dog.color} age={dog.age} image={dog.image} />
         })}
         </div>
         </div>

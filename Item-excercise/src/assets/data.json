@@ -4,43 +4,50 @@
             "name": "Lisa",
             "size": "Small",
             "color": "Black",
-            "age": 2
+            "age": 2,
+            "image": "assets/0a79ab14-600e-4adf-8ef1-6c24bab154e4.jpg"
         },
         {
             "name": "Zelda",
             "size": "Medium",
             "color": "Black and White",
-            "age": 2
+            "age": 2,
+            "image": "assets/3a7ba33f-9818-4970-a713-db29fe43baa8.jpg"
         },
         {
             "name": "Albin",
             "size": "Big",
             "color": "Black, white, brown",
-            "age": 10
+            "age": 10,
+            "image": "assets/5bb18e5e-7ba5-4e99-b0ea-bedb7a202528.jpg"
         },
         {
             "name": "Daito",
             "size": "Small",
             "color": "White, brown",
-            "age": 10
+            "age": 10,
+            "image": "assets/41bf3852-811c-470f-8e3d-8b023e5e1c0b.jpg"
         },
         {
             "name": "George",
             "size": "Giant",
             "color": "Black",
-            "age": 5
+            "age": 5,
+            "image": "assets/41bf3852-811c-470f-8e3d-8b023e5e1c0b.jpg"
         },
         {
             "name": "Azra",
             "size": "Medium",
             "color": "Black, brown",
-            "age": 3
+            "age": 3,
+            "image": "assets/d034bd3f-4f5a-4d45-92b8-0bc8c314022a.jpg"
         },
         {
             "name": "Neo",
             "size": "Small",
             "color": "White, brown",
-            "age": 2
+            "age": 2,
+            "image": "assets/d40de385-3626-46c8-94bf-b7097226174f.jpg"
         }
     ]
 }

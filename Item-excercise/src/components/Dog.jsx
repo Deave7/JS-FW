@@ -1,6 +1,6 @@
 import './Dog.css'
 
-function Dog({name,size, color, age }) {
+function Dog({name,size, color, age, image }) {
 
     return (
       <>
@@ -10,6 +10,7 @@ function Dog({name,size, color, age }) {
         <p>Size: {size}</p>
         <p>Color: {color}</p>
         <p>Age: {age}</p>
+        <img src={image} height="100px" alt="a dog" />
       </div>
       </>
     )
