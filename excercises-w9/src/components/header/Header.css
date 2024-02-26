@@ -1,0 +1,30 @@
+.header {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--tertiary);
+
+}
+
+.header-button-list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        min-width: 15rem;
+        text-align: center;
+    }
+
+    li:hover {
+        color: var(--secondary);
+        cursor: pointer;
+    }
+}
+
+
