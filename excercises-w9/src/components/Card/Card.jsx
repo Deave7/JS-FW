@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import './Card.css'
 
-const Card = (firstName, lastName, pantColor, favoriteFood, favoriteTool, pet, hobby) => {
-    <div>
+const Card = ({ firstName, lastName, pantColor, favoriteFood, favoriteTool, pet, hobby }) => {
+    
+    return (
+    <div className='card'>
         <ul>
             <li>First name: {firstName} </li>
             <li>Last name: {lastName}</li>
@@ -12,6 +15,7 @@ const Card = (firstName, lastName, pantColor, favoriteFood, favoriteTool, pet, h
             <li>Hobby: {hobby}</li>
         </ul>
     </div>
+    )
 }
 
 export default Card

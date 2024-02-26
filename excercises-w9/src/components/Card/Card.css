@@ -1,0 +1,16 @@
+.card {
+    background-color: var(--tertiary);
+    border: solid rgb(211, 211, 211) 2px;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 15rem;
+    min-width: 17rem;
+}
+
+p {
+    color: black;
+    margin-bottom: 0.5rem;
+    min-width: 10rem;
+}
