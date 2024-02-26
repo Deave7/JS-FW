@@ -1,6 +1,12 @@
 import './Dog.css'
 
+
+
 function Dog({name,size, color, age, image }) {
+
+  const handleClick = () => {
+    console.log('Hello')
+  }
 
     return (
       <>
@@ -10,7 +16,8 @@ function Dog({name,size, color, age, image }) {
         <p>Size: {size}</p>
         <p>Color: {color}</p>
         <p>Age: {age}</p>
-        <img src={image} height="100px" alt="a dog" />
+        <img src={image} height="200px" alt="a dog" />
+        <button className='click-me-button' onClick={handleClick}>Click me</button>
       </div>
       </>
     )
