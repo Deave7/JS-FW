@@ -18,15 +18,3 @@
 #person-select {
     font-size: 1.5rem;
 }
-
-.select-button {
-    font-size: 1.5rem;
-    width: 21rem;
-    background-color: var(--tertiary);
-    border: 2px var(--primary) solid;
-}
-
-.select-button:hover {
-    background-color: var(--secondary);
-    cursor: pointer;
-}

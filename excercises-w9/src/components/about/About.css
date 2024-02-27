@@ -1,0 +1,27 @@
+.about-container {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.past-projects-container {
+    display: grid;
+    grid-template-columns: repeat(7, 15rem);
+    margin-bottom: 1rem;
+    gap: 1rem;
+    
+}
+
+h2,h3 {
+    margin-bottom: 1rem;
+}
+
+p {
+    color: white;
+    width: 60rem;
+}
+

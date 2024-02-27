@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import './DropDown.css'
-import list from '../../bob_advanced_10.json'
 import Card from '../card/Card.jsx'
 
-const DropDown = () => {
+// eslint-disable-next-line react/prop-types
+const DropDown = ({list}) => {
     const data = list;
     const [selectedPerson, setSelectedPerson] = useState(null)
     const [selectedPersonDetails, setSelectedPersonDetails] = useState(null);
