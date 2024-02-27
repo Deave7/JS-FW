@@ -9,10 +9,25 @@ const Card = ({ firstName, lastName, pantColor, favoriteFood, favoriteTool, pet,
             <li>First name: {firstName} </li>
             <li>Last name: {lastName}</li>
             <li>Pant color: {pantColor}</li>
-            <li>Favorite food: {favoriteFood}</li>
+            <li>Favorite foods:</li>
+            <ul> 
+                {favoriteFood.map((food, index) => (
+                  <li key={index}>{food}</li>
+                ))}
+            </ul>
             <li>Favorite tool: {favoriteTool}</li>
-            <li>Pet: {pet}</li>
-            <li>Hobby: {hobby}</li>
+            <li>Pets:</li>
+            <ul>
+                {pet.map((pet, index) => (
+                    <li key={index}>{pet}</li>
+                ))}
+            </ul>
+            <li>Hobbies:</li>
+            <ul>
+                {hobby.map((hobby, index) => (
+                    <li key={index}>{hobby}</li>
+                ))}
+            </ul>
         </ul>
     </div>
     )

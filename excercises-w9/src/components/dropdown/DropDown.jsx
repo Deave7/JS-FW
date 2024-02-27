@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import './DropDown.css'
-import list from '../../bob_simple_10.json'
+import list from '../../bob_advanced_10.json'
 import Card from '../card/Card.jsx'
 
 const DropDown = () => {
@@ -13,7 +13,7 @@ const DropDown = () => {
         setSelectedPerson(selectedPersonName);
 
         
-        const personDetails = data.find(person => `${person.firstname} ${person.lastname}` === selectedPersonName);
+        const personDetails = data.construction_workers.find(person => `${person.firstname} ${person.lastname}` === selectedPersonName);
         setSelectedPersonDetails(personDetails);
     }
 
@@ -25,7 +25,7 @@ const DropDown = () => {
         
         <select name="" id="person-select" onChange={handleSelectChange}>
             <option value="">---Please choose an option---</option>
-            {data.map((person, index) => (
+            {data.construction_workers.map((person, index) => (
                     <option key={index} value={`${person.firstname} ${person.lastname}`}>
                         {person.firstname} {person.lastname}
                     </option>

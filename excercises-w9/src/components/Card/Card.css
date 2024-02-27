@@ -14,3 +14,13 @@ p {
     margin-bottom: 0.5rem;
     min-width: 10rem;
 }
+
+ul {
+
+    li {
+        margin-bottom: 0.1rem;
+    }
+    ul {
+        margin-left: 1rem;
+    }
+}
