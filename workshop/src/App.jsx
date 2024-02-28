@@ -6,6 +6,7 @@ import Counter from './components/Counter/Counter'
 import Check from './components/Check/Check'
 import Radio from './components/Radio/Radio'
 import DropDown from './components/DropDown/DropDown'
+import ToDo from './components/ToDo/ToDo'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Check></Check>
     <Radio></Radio>
     <DropDown vehicleArray={vehicleArray}></DropDown>
+    <ToDo></ToDo>
     </>
   )
 }
