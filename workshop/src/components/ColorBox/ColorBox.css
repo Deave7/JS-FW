@@ -1,0 +1,9 @@
+.div-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.square {
+    height: 2rem;
+    width: 2rem;
+}

@@ -7,11 +7,13 @@ import Check from './components/Check/Check'
 import Radio from './components/Radio/Radio'
 import DropDown from './components/DropDown/DropDown'
 import ToDo from './components/ToDo/ToDo'
+import ColorBox from './components/ColorBox/Colorbox'
 
 
 function App() {
   const animalArray = ['Horse', 'Cat', 'Dog', 'Elephant', 'Zebra', 'Bear', 'Moose', 'Bobcat']
   const vehicleArray = ['Car', 'Motorcycle', 'Bicyle', 'Airplane', 'Helicopter']
+  const colorArray = ['red', 'blue', 'green', 'yellow', 'white']
 
   return (
     <>
@@ -23,6 +25,7 @@ function App() {
     <Radio></Radio>
     <DropDown vehicleArray={vehicleArray}></DropDown>
     <ToDo></ToDo>
+    <ColorBox colorArray={colorArray}></ColorBox>
     </>
   )
 }
