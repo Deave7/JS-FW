@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 function Check() {
-    const [isCatChecked, setIsCatChecked] = useState(false)
+   /*  const [isCatChecked, setIsCatChecked] = useState(false)
     const [isDogChecked, setIsDogChecked] = useState(false)
     const [value, setValue] = useState("")
 
@@ -34,6 +34,23 @@ function Check() {
         else {
             setValue('')
         }
+    } */
+
+    const [value, setValue] = useState('')
+
+    const handleChange = () => {
+        const catChecked = document.getElementById('Cat').checked;
+        const dogChecked = document.getElementById('Dog').checked;
+    
+        if (catChecked && dogChecked) {
+          setValue('Both Cat and Dog are checked');
+        } else if (catChecked) {
+          setValue('Cat is checked');
+        } else if (dogChecked) {
+          setValue('Dog is checked');
+        } else {
+          setValue('');
+        }
     }
 
     return (  
@@ -42,12 +59,12 @@ function Check() {
                 <legend>Are you a dog or a cat person? </legend>
 
                 <div>
-                    <input type="checkbox" name="Cat" id="Cat" onChange={handleCatChange} />
+                    <input type="checkbox" name="Cat" id="Cat" onChange={handleChange} />
                     <label htmlFor="Cat">Cat</label>
                 </div>
 
                 <div>
-                    <input type="checkbox" name="Dog" id="Dog" onChange={handleDogChange}/>
+                    <input type="checkbox" name="Dog" id="Dog" onChange={handleChange}/>
                     <label htmlFor="Dog">Dog</label>
                 </div>
 

@@ -7,13 +7,22 @@ function List({animalArray}) {
 
   return (
     <>
-        <ul>
         {animalArray.map((animal, index) => (
-
-          <li key={index} >{animal}</li>
           
+          <ul key={index}>
+            {typeof animal === 'string' ? (
+              <li>{animal}</li>
+            ) : (
+              <>
+              <li > Name: {animal.name}</li>
+              <ul>
+              <li >Legs: {animal.legs}</li>
+              <li >Color: {animal.color}</li>
+              </ul>
+              </>
+              )}
+              </ul>
         ))}
-        </ul>
     </>
   )
 }

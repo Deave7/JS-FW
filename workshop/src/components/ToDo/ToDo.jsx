@@ -12,6 +12,12 @@ function ToDo() {
         setValue('')
     }
 
+    const handleDelete = (index) => {
+        const newItems = [...items]
+        newItems.splice(index, 1)
+        setItems(newItems)
+    }
+
 
     return ( 
         <>
@@ -20,7 +26,7 @@ function ToDo() {
 
         <ul>
             {items.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li onClick={handleDelete} key={index}>{item}</li>
             ))}
         </ul>
         </>
