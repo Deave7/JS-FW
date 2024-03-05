@@ -1,42 +1,47 @@
 import React, { useRef, useState } from "react";
 
-function Addition() {
-    const [value, setValue] = useState('');
-    const [valueOne, setValueOne] = useState('');
-    const [valueTwo, setValueTwo] = useState('');
+function Addition<T extends string>() {
+    const [values, setValues] = useState<{ valueOne: T; valueTwo: T }>({ valueOne: '' as T, valueTwo: '' as T });
+    const [value, setValue] = useState<T | ''>('');
     const inputOne = useRef<HTMLInputElement>(null);
     const inputTwo = useRef<HTMLInputElement>(null);
 
-    let num1 = 0;
-    let num2 = 0;
-
-    const handleChange = (field: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = event.target.value;
-        if (field === 'inputOne') {
-            setValueOne(inputValue);
-        } else if (field === 'inputTwo') {
-            setValueTwo(inputValue);
-        }
+    const handleChange = (field: keyof typeof values) => (event: React.ChangeEvent<HTMLInputElement>) => {
+        const inputValue = event.target.value as T;
+        setValues(prevState => ({
+            ...prevState,
+            [field]: inputValue
+        }));
     }
 
     const handleClick = () => {
         if (inputOne.current && inputTwo.current) {
-            num1 = Number(inputOne.current.value);
-            num2 = Number(inputTwo.current.value);
-            const result = String(num1 + num2);
+            const num1 = isNaN(Number(values.valueOne)) ? values.valueOne : Number(values.valueOne);
+            const num2 = isNaN(Number(values.valueTwo)) ? values.valueTwo : Number(values.valueTwo);
+    
+            let result: T | '' = '';
+    
+            if (typeof num1 === 'number' && typeof num2 === 'number') {
+                result = String(num1 + num2) as T;
+            } else {
+                result = String(num1) + String(num2) as T;
+            }
+    
             setValue(result);
-            setValueOne('');
-            setValueTwo('');
-            inputOne.current.focus()
+            setValues({ valueOne: '' as T, valueTwo: '' as T });
+            inputOne.current.focus();
         }
     }
 
     return ( 
         <>
-            <input ref={inputOne} value={valueOne} type="text" onChange={handleChange('inputOne')} />
-            <input ref={inputTwo} value={valueTwo} type="text" onChange={handleChange('inputTwo')} />
+        <fieldset>
+            <legend>Addition + concat</legend>
+            <input ref={inputOne} value={values.valueOne as string} type="text" onChange={handleChange('valueOne')} />
+            <input ref={inputTwo} value={values.valueTwo as string} type="text" onChange={handleChange('valueTwo')} />
             <button onClick={handleClick}>Click me!</button>
             <p>{value}</p>
+        </fieldset>
         </>
     );
 }

@@ -1,34 +1,39 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 function ChangeText() {
-    const [value, setValue] = useState<string>('');
-    const inputRef = useRef<HTMLInputElement>(null);
-    
+  const [value, setValue] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
-    const handleClick = () => {
-        if (value === '') {
-            alert('Nothing happens if you try to input a empty string...')
+  const handleClick = () => {
+    if (value === "") {
+      alert("Nothing happens if you try to input a empty string...");
 
-            if (inputRef.current) {
-                inputRef.current.focus()
-            }
-        }
-        else {
-            if (inputRef.current) {
-                setValue(inputRef.current.value)
-                inputRef.current.focus()
-            }
-        }
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
+    } else {
+      if (inputRef.current) {
+        setValue(inputRef.current.value);
+        inputRef.current.focus();
+      }
+    }
+  };
 
-    };
-
-    return (
-        <>
-            <input type="text" ref={inputRef} value={value} onChange={(e) => setValue(e.target.value)} />
-            <button onClick={handleClick}>Click Me!</button>
-            <p>{value}</p>
-        </>
-    );
+  return (
+    <>
+      <fieldset>
+        <legend>Change Text</legend>
+        <input
+          type="text"
+          ref={inputRef}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <button onClick={handleClick}>Click Me!</button>
+        <p>{value}</p>
+      </fieldset>
+    </>
+  );
 }
 
 export default ChangeText;
