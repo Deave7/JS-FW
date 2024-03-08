@@ -7,11 +7,13 @@ import PrettyText from './components/PrettyText'
 import QuestList from './components/questList'
 import Counter from './components/Counter'
 import Stringr from './components/Stringr'
+import QuestListProject from './components/QuestListProject'
 
 function App() {
 
   return (
     <>
+      <QuestListProject/>
       <ChangeText/>
       <Addition/>
       <QuestList/>
