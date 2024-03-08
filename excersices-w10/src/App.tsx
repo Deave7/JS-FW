@@ -5,6 +5,8 @@ import ColorBox from './components/ColorBox'
 import List from './components/List'
 import PrettyText from './components/PrettyText'
 import QuestList from './components/questList'
+import Counter from './components/Counter'
+import Stringr from './components/Stringr'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <ColorBox/>
       <List/>
       <PrettyText/>
+      <Counter/>
+      <Stringr/>
     </>
   )
 }
