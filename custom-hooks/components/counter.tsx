@@ -4,13 +4,15 @@ type CounterProps = {
   startValue?: number;
   maxValue?: number;
   minValue?: number;
+  stepValue?: number;
 }
 
-const Counter: React.FC<CounterProps> = ({ startValue, maxValue, minValue }) => {
-  const { count, increment, decrement, reset, countToMin, countToMax, isEven } = useCounter(
+const Counter: React.FC<CounterProps> = ({ startValue, maxValue, minValue, stepValue = 3 }) => {
+  const { count, increment, decrement, reset, countToMin, countToMax, isEven, stepCountDown, stepCountUp } = useCounter(
     startValue,
     maxValue,
-    minValue
+    minValue,
+    stepValue
   );
 
   return (
@@ -22,6 +24,8 @@ const Counter: React.FC<CounterProps> = ({ startValue, maxValue, minValue }) => 
       <button onClick={reset}>Reset</button>
       <button onClick={countToMin}>Set to Min</button>
       <button onClick={countToMax}>Set to Max</button>
+      <button onClick={stepCountDown}>Count {stepValue} steps Down</button>
+      <button onClick={stepCountUp}>Count {stepValue} steps Up</button>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const useCounter = (startValue: number = 0, maxValue: number = 999, minValue: number = -999) => {
+const useCounter = (startValue: number = 0, maxValue: number = 999, minValue: number = -999, stepValue: number) => {
     const [count, setCount] = useState<number>(startValue)
 
     const increment = () => {
@@ -31,7 +31,14 @@ const useCounter = (startValue: number = 0, maxValue: number = 999, minValue: nu
     return count % 2 === 0;
    }
 
-    return { count, increment, decrement, reset, countToMax, countToMin, isEven}
+   const stepCountUp = () => {
+        setCount(count + stepValue)
+   }
+   const stepCountDown = () => {
+        setCount(count - stepValue)
+   }
+   
+    return { count, increment, decrement, reset, countToMax, countToMin, isEven, stepCountDown, stepCountUp, stepValue}
 
 }
 
